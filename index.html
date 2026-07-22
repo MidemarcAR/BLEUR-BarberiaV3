@@ -840,7 +840,7 @@
       <div class="foot-info-item">
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
         <h5>Horario</h5>
-        <p>Lunes a sábado — 10:00 a 20:00 h<br>Solo con cita previa</p>
+        <p>Lunes a sábado — 10:00 a 19:00 h<br>Solo con cita previa</p>
       </div>
       <div class="foot-info-item">
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h12l3 6-9 12L3 9z"/><path d="M3 9h18M9 3l3 6 3-6M12 9l-2 12M12 9l2 12"/></svg></div>
@@ -974,10 +974,10 @@
     return days;
   }
 
-  // 10:00 a 20:00, turnos fijos de 30 minutos
+  // 10:00 a 19:00, turnos fijos de 30 minutos
   function generateSlots(){
     const slots = [];
-    for(let total = 10*60; total < 20*60; total += 30){
+    for(let total = 10*60; total < 19*60; total += 30){
       const h = String(Math.floor(total/60)).padStart(2,'0');
       const m = String(total%60).padStart(2,'0');
       slots.push(`${h}:${m}`);
